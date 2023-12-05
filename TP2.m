@@ -252,13 +252,38 @@ moyennes_P(k,1) = mean(mean_P_cond1);
 moyennes_O(k,1) = mean(mean_O_cond1);
 
 
-%condition 2
-
+% condition 2
+% pour tous les blocs
 for i=1:5
     %identification des blocs
     eval(['bloc',num2str(i),'_cond2 = temps_condition2(',num2str(i),',:);'])
 
     %normalisation du signal
+
+    eval(['FP1_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 2);'])
+    eval(['norm_FP1_bloc',num2str(i),'__cond2 = ((FP1_bloc',num2str(i),'_cond2) - min(FP1_bloc',num2str(i),'_cond2)) / (max(FP1_bloc',num2str(i),'_cond2)-min(FP1_bloc',num2str(i),'_cond2));'])
+    eval(['FP2_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 3);'])
+    eval(['norm_FP2_bloc',num2str(i),'__cond2 = ((FP2_bloc',num2str(i),'_cond2) - min(FP2_bloc',num2str(i),'_cond2)) / (max(FP2_bloc',num2str(i),'_cond2)-min(FP2_bloc',num2str(i),'_cond2));'])
+    eval(['FC5_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 4);'])
+    eval(['norm_FC5_bloc',num2str(i),'__cond2 = ((FC5_bloc',num2str(i),'_cond2) - min(FC5_bloc',num2str(i),'_cond2)) / (max(FC5_bloc',num2str(i),'_cond2)-min(FC5_bloc',num2str(i),'_cond2));'])
+    eval(['FC6_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 5);'])
+    eval(['norm_FC6_bloc',num2str(i),'__cond2 = ((FC6_bloc',num2str(i),'_cond2) - min(FC6_bloc',num2str(i),'_cond2)) / (max(FC6_bloc',num2str(i),'_cond2)-min(FC6_bloc',num2str(i),'_cond2));'])
+    eval(['FZ_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 6);'])
+    eval(['norm_FZ_bloc',num2str(i),'__cond2 = ((FZ_bloc',num2str(i),'_cond2) - min(FZ_bloc',num2str(i),'_cond2)) / (max(FZ_bloc',num2str(i),'_cond2)-min(FZ_bloc',num2str(i),'_cond2));'])
+    eval(['T7_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 7);'])
+    eval(['norm_T7_bloc',num2str(i),'__cond2 = ((T7_bloc',num2str(i),'_cond2) - min(T7_bloc',num2str(i),'_cond2)) / (max(T7_bloc',num2str(i),'_cond2)-min(T7_bloc',num2str(i),'_cond2));'])
+    eval(['T8_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 9);'])
+    eval(['norm_T8_bloc',num2str(i),'__cond2 = ((T8_bloc',num2str(i),'_cond2) - min(T8_bloc',num2str(i),'_cond2)) / (max(T8_bloc',num2str(i),'_cond2)-min(T8_bloc',num2str(i),'_cond2));'])
+    eval(['P7_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 10);'])
+    eval(['norm_P7_bloc',num2str(i),'__cond2 = ((P7_bloc',num2str(i),'_cond2) - min(P7_bloc',num2str(i),'_cond2)) / (max(P7_bloc',num2str(i),'_cond2)-min(P7_bloc',num2str(i),'_cond2));'])
+    eval(['P3_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 11);'])
+    eval(['norm_P3_bloc',num2str(i),'__cond2 = ((P3_bloc',num2str(i),'_cond2) - min(P3_bloc',num2str(i),'_cond2)) / (max(P3_bloc',num2str(i),'_cond2)-min(P3_bloc',num2str(i),'_cond2));'])
+    eval(['PZ_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 12);'])
+    eval(['norm_PZ_bloc',num2str(i),'__cond2 = ((PZ_bloc',num2str(i),'_cond2) - min(PZ_bloc',num2str(i),'_cond2)) / (max(PZ_bloc',num2str(i),'_cond2)-min(PZ_bloc',num2str(i),'_cond2));'])
+    eval(['P4_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 13);'])
+    eval(['norm_P4_bloc',num2str(i),'__cond2 = ((P4_bloc',num2str(i),'_cond2) - min(P4_bloc',num2str(i),'_cond2)) / (max(P4_bloc',num2str(i),'_cond2)-min(P4_bloc',num2str(i),'_cond2));'])
+    eval(['P8_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 14);'])
+    eval(['norm_P8_bloc',num2str(i),'__cond2 = ((P8_bloc',num2str(i),'_cond2) - min(P8_bloc',num2str(i),'_cond2)) / (max(P8_bloc',num2str(i),'_cond2)-min(P8_bloc',num2str(i),'_cond2));'])
     eval(['O1_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 15);'])
     eval(['norm_O1_bloc',num2str(i),'__cond2 = ((O1_bloc',num2str(i),'_cond2) - min(O1_bloc',num2str(i),'_cond2)) / (max(O1_bloc',num2str(i),'_cond2)-min(O1_bloc',num2str(i),'_cond2));'])
     eval(['Oz_bloc',num2str(i),'_cond2 = SIGNAL(bloc',num2str(i),'_cond2(1):bloc',num2str(i),'_cond2(2), 16);'])
@@ -267,29 +292,66 @@ for i=1:5
     eval(['norm_O2_bloc',num2str(i),'__cond2 = ((O2_bloc',num2str(i),'_cond2) - min(O2_bloc',num2str(i),'_cond2)) / (max(O2_bloc',num2str(i),'_cond2)-min(O2_bloc',num2str(i),'_cond2));'])
     
     %calcul des TF
+    eval(['fourier_FP1_bloc',num2str(i),'_cond2 = abs(fft(norm_FP1_bloc',num2str(i),'__cond2));'])
+    eval(['fourier_FP2_bloc',num2str(i),'_cond2 = abs(fft(norm_FP2_bloc',num2str(i),'__cond2));'])
+    eval(['fourier_FC5_bloc',num2str(i),'_cond2 = abs(fft(norm_FC5_bloc',num2str(i),'__cond2));'])
+    eval(['fourier_FC6_bloc',num2str(i),'_cond2 = abs(fft(norm_FC6_bloc',num2str(i),'__cond2));'])
+    eval(['fourier_FZ_bloc',num2str(i),'_cond2 = abs(fft(norm_FZ_bloc',num2str(i),'__cond2));'])
+    eval(['fourier_T7_bloc',num2str(i),'_cond2 = abs(fft(norm_T7_bloc',num2str(i),'__cond2));'])
+    eval(['fourier_T8_bloc',num2str(i),'_cond2 = abs(fft(norm_T8_bloc',num2str(i),'__cond2));'])
+    eval(['fourier_P7_bloc',num2str(i),'_cond2 = abs(fft(norm_P7_bloc',num2str(i),'__cond2));'])
+    eval(['fourier_P3_bloc',num2str(i),'_cond2 = abs(fft(norm_P3_bloc',num2str(i),'__cond2));'])
+    eval(['fourier_PZ_bloc',num2str(i),'_cond2 = abs(fft(norm_PZ_bloc',num2str(i),'__cond2));'])
+    eval(['fourier_P4_bloc',num2str(i),'_cond2 = abs(fft(norm_P4_bloc',num2str(i),'__cond2));'])
+    eval(['fourier_P8_bloc',num2str(i),'_cond2 = abs(fft(norm_P8_bloc',num2str(i),'__cond2));'])
     eval(['fourier_O1_bloc',num2str(i),'_cond2 = abs(fft(norm_O1_bloc',num2str(i),'__cond2));'])
     eval(['fourier_Oz_bloc',num2str(i),'_cond2 = abs(fft(norm_Oz_bloc',num2str(i),'__cond2));'])
     eval(['fourier_O2_bloc',num2str(i),'_cond2 = abs(fft(norm_O2_bloc',num2str(i),'__cond2));'])
     
-    %on ne prend que les fréquences entre 80 et 120 
+    % on prend entre 80 et 120 Hz
+    eval(['fourier_FP1_bloc',num2str(i),'_cond2 = fourier_FP1_bloc',num2str(i),'_cond2(80:120);'])
+    eval(['fourier_FP2_bloc',num2str(i),'_cond2 = fourier_FP2_bloc',num2str(i),'_cond2(80:120);'])
+    eval(['fourier_FC5_bloc',num2str(i),'_cond2 = fourier_FC5_bloc',num2str(i),'_cond2(80:120);'])
+    eval(['fourier_FC6_bloc',num2str(i),'_cond2 = fourier_FC6_bloc',num2str(i),'_cond2(80:120);'])
+    eval(['fourier_FZ_bloc',num2str(i),'_cond2 = fourier_FZ_bloc',num2str(i),'_cond2(80:120);'])
+    eval(['fourier_T7_bloc',num2str(i),'_cond2 = fourier_T7_bloc',num2str(i),'_cond2(80:120);'])
+    eval(['fourier_T8_bloc',num2str(i),'_cond2 = fourier_T8_bloc',num2str(i),'_cond2(80:120);'])
+    eval(['fourier_P7_bloc',num2str(i),'_cond2 = fourier_P7_bloc',num2str(i),'_cond2(80:120);'])
+    eval(['fourier_P3_bloc',num2str(i),'_cond2 = fourier_P3_bloc',num2str(i),'_cond2(80:120);'])
+    eval(['fourier_PZ_bloc',num2str(i),'_cond2 = fourier_PZ_bloc',num2str(i),'_cond2(80:120);'])
+    eval(['fourier_P4_bloc',num2str(i),'_cond2 = fourier_P4_bloc',num2str(i),'_cond2(80:120);'])
+    eval(['fourier_P8_bloc',num2str(i),'_cond2 = fourier_P8_bloc',num2str(i),'_cond2(80:120);'])
     eval(['fourier_O1_bloc',num2str(i),'_cond2 = fourier_O1_bloc',num2str(i),'_cond2(80:120);'])
     eval(['fourier_Oz_bloc',num2str(i),'_cond2 = fourier_Oz_bloc',num2str(i),'_cond2(80:120);'])
     eval(['fourier_O2_bloc',num2str(i),'_cond2 = fourier_O2_bloc',num2str(i),'_cond2(80:120);'])
-
-
-
+    
     %somme pour chaque bloc
+    eval(['somme_FP1_cond2(',num2str(i),') = sum(fourier_FP1_bloc',num2str(i),'_cond2);'])
+    eval(['somme_FP2_cond2(',num2str(i),') = sum(fourier_FP2_bloc',num2str(i),'_cond2);'])
+    eval(['somme_FC5_cond2(',num2str(i),') = sum(fourier_FC5_bloc',num2str(i),'_cond2);'])
+    eval(['somme_FC6_cond2(',num2str(i),') = sum(fourier_FC6_bloc',num2str(i),'_cond2);'])
+    eval(['somme_FZ_cond2(',num2str(i),') = sum(fourier_FZ_bloc',num2str(i),'_cond2);'])
+    eval(['somme_T7_cond2(',num2str(i),') = sum(fourier_T7_bloc',num2str(i),'_cond2);'])
+    eval(['somme_T8_cond2(',num2str(i),') = sum(fourier_T8_bloc',num2str(i),'_cond2);'])
+    eval(['somme_P7_cond2(',num2str(i),') = sum(fourier_P7_bloc',num2str(i),'_cond2);'])
+    eval(['somme_P3_cond2(',num2str(i),') = sum(fourier_P3_bloc',num2str(i),'_cond2);'])
+    eval(['somme_PZ_cond2(',num2str(i),') = sum(fourier_PZ_bloc',num2str(i),'_cond2);'])
+    eval(['somme_P4_cond2(',num2str(i),') = sum(fourier_P4_bloc',num2str(i),'_cond2);'])
+    eval(['somme_P8_cond2(',num2str(i),') = sum(fourier_P8_bloc',num2str(i),'_cond2);'])
     eval(['somme_O1_cond2(',num2str(i),') = sum(fourier_O1_bloc',num2str(i),'_cond2);'])
     eval(['somme_Oz_cond2(',num2str(i),') = sum(fourier_Oz_bloc',num2str(i),'_cond2);'])
     eval(['somme_O2_cond2(',num2str(i),') = sum(fourier_O2_bloc',num2str(i),'_cond2);'])
     
     %moyenne pour tous les blocs
-    mean_O1_cond2 = mean(somme_O1_cond2);
-    mean_Oz_cond2 = mean(somme_Oz_cond2);
-    mean_O2_cond2 = mean(somme_O2_cond2);
-    mean_O_cond2 = [mean_O1_cond2 mean_Oz_cond2 mean_O2_cond2];
+    mean_F_cond2 = [mean(somme_FP1_cond2) mean(somme_FP2_cond2) mean(somme_FC5_cond2) mean(somme_FC6_cond2) mean(somme_FZ_cond2)];
+    mean_T_cond2 = [mean(somme_T7_cond2) mean(somme_T8_cond2)];
+    mean_P_cond2 = [mean(somme_P7_cond2) mean(somme_P3_cond2) mean(somme_PZ_cond2)  mean(somme_P4_cond2)  mean(somme_P8_cond2)];
+    mean_O_cond2 = [mean(somme_O1_cond2) mean(somme_Oz_cond2) mean(somme_O2_cond2)];
 end
 
+moyennes_F(k,2) = mean(mean_F_cond2);
+moyennes_T(k,2) = mean(mean_T_cond2);
+moyennes_P(k,2) = mean(mean_P_cond2);
 moyennes_O(k,2) = mean(mean_O_cond2);
 
 end
@@ -307,4 +369,35 @@ title('moyennes des électrodes O selon les sujets et les conditions')
 xlabel('sujets')
 ylabel('Hz')
 
+
+%Toutes les F
+figure
+plot(1:1:20,moyennes_F(:,1),'*')
+hold on
+plot(1:1:20,moyennes_F(:,2),'o')
+legend('condition 1 = fermés','condition 2 = ouverts')
+title('moyennes des électrodes F selon les sujets et les conditions')
+xlabel('sujets')
+ylabel('Hz')
+
+%Toutes les T
+figure
+plot(1:1:20,moyennes_T(:,1),'*')
+hold on
+plot(1:1:20,moyennes_T(:,2),'o')
+legend('condition 1 = fermés','condition 2 = ouverts')
+title('moyennes des électrodes T selon les sujets et les conditions')
+xlabel('sujets')
+ylabel('Hz')
+
+
+%Toutes les P
+figure
+plot(1:1:20,moyennes_P(:,1),'*')
+hold on
+plot(1:1:20,moyennes_P(:,2),'o')
+legend('condition 1 = fermés','condition 2 = ouverts')
+title('moyennes des électrodes P selon les sujets et les conditions')
+xlabel('sujets')
+ylabel('Hz')
 
