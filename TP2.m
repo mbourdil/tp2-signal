@@ -360,7 +360,8 @@ end
 
 
 %Toutes les O
-figure
+subplot(2,2,1)
+
 plot(1:1:20,moyennes_O(:,1),'*')
 hold on
 plot(1:1:20,moyennes_O(:,2),'o')
@@ -369,9 +370,19 @@ title('moyennes des électrodes O selon les sujets et les conditions')
 xlabel('sujets')
 ylabel('Hz')
 
+%Toutes les P
+subplot(2,2,2)
+plot(1:1:20,moyennes_P(:,1),'*')
+hold on
+plot(1:1:20,moyennes_P(:,2),'o')
+legend('condition 1 = fermés','condition 2 = ouverts')
+title('moyennes des électrodes P selon les sujets et les conditions')
+xlabel('sujets')
+ylabel('Hz')
+
 
 %Toutes les F
-figure
+subplot(2,2,3)
 plot(1:1:20,moyennes_F(:,1),'*')
 hold on
 plot(1:1:20,moyennes_F(:,2),'o')
@@ -381,7 +392,7 @@ xlabel('sujets')
 ylabel('Hz')
 
 %Toutes les T
-figure
+subplot(2,2,4)
 plot(1:1:20,moyennes_T(:,1),'*')
 hold on
 plot(1:1:20,moyennes_T(:,2),'o')
@@ -391,13 +402,34 @@ xlabel('sujets')
 ylabel('Hz')
 
 
-%Toutes les P
+%% Différences entre régions cérébrales
+
+diff_O = zeros(20,1);
+diff_P = zeros(20,1);
+diff_T = zeros(20,1);
+diff_F = zeros(20,1);
+
+
+for i=1:20
+    diff_O(i) = moyennes_O(i,1)-moyennes_O(i,2);
+    diff_P(i) = moyennes_P(i,1)-moyennes_P(i,2);
+    diff_T(i) = moyennes_T(i,1)-moyennes_T(i,2);
+    diff_F(i) = moyennes_F(i,1)-moyennes_F(i,2);
+end
+
+differences = [mean(diff_O) mean(diff_P) mean(diff_T) mean(diff_F)];
+
 figure
-plot(1:1:20,moyennes_P(:,1),'*')
-hold on
-plot(1:1:20,moyennes_P(:,2),'o')
-legend('condition 1 = fermés','condition 2 = ouverts')
-title('moyennes des électrodes P selon les sujets et les conditions')
-xlabel('sujets')
-ylabel('Hz')
+plot(1:1:4, differences, "*")
+set(gca, 'xticklabels', {'O','P','T','F'})
+%mauvais affichage des abscisses
+
+
+
+
+
+
+
+
+
 
