@@ -157,21 +157,30 @@ for i=1:5
 
     %normalisation du signal
 
-    eval(['O1_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 15);'])
-    eval(['norm_O1_bloc',num2str(i),'__cond1 = ((O1_bloc',num2str(i),'_cond1) - min(O1_bloc',num2str(i),'_cond1)) / (max(O1_bloc',num2str(i),'_cond1)-min(O1_bloc',num2str(i),'_cond1));'])
-    eval(['O1_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 15);'])
-    eval(['norm_O1_bloc',num2str(i),'__cond1 = ((O1_bloc',num2str(i),'_cond1) - min(O1_bloc',num2str(i),'_cond1)) / (max(O1_bloc',num2str(i),'_cond1)-min(O1_bloc',num2str(i),'_cond1));'])
-    eval(['O1_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 15);'])
-    eval(['norm_O1_bloc',num2str(i),'__cond1 = ((O1_bloc',num2str(i),'_cond1) - min(O1_bloc',num2str(i),'_cond1)) / (max(O1_bloc',num2str(i),'_cond1)-min(O1_bloc',num2str(i),'_cond1));'])
-    eval(['O1_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 15);'])
-    eval(['norm_O1_bloc',num2str(i),'__cond1 = ((O1_bloc',num2str(i),'_cond1) - min(O1_bloc',num2str(i),'_cond1)) / (max(O1_bloc',num2str(i),'_cond1)-min(O1_bloc',num2str(i),'_cond1));'])
-    eval(['O1_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 15);'])
-    eval(['norm_O1_bloc',num2str(i),'__cond1 = ((O1_bloc',num2str(i),'_cond1) - min(O1_bloc',num2str(i),'_cond1)) / (max(O1_bloc',num2str(i),'_cond1)-min(O1_bloc',num2str(i),'_cond1));'])
-    eval(['O1_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 15);'])
-    eval(['norm_O1_bloc',num2str(i),'__cond1 = ((O1_bloc',num2str(i),'_cond1) - min(O1_bloc',num2str(i),'_cond1)) / (max(O1_bloc',num2str(i),'_cond1)-min(O1_bloc',num2str(i),'_cond1));'])
-    eval(['O1_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 15);'])
-    eval(['norm_O1_bloc',num2str(i),'__cond1 = ((O1_bloc',num2str(i),'_cond1) - min(O1_bloc',num2str(i),'_cond1)) / (max(O1_bloc',num2str(i),'_cond1)-min(O1_bloc',num2str(i),'_cond1));'])
-    
+    eval(['FP1_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 2);'])
+    eval(['norm_FP1_bloc',num2str(i),'__cond1 = ((FP1_bloc',num2str(i),'_cond1) - min(FP1_bloc',num2str(i),'_cond1)) / (max(FP1_bloc',num2str(i),'_cond1)-min(FP1_bloc',num2str(i),'_cond1));'])
+    eval(['FP2_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 3);'])
+    eval(['norm_FP2_bloc',num2str(i),'__cond1 = ((FP2_bloc',num2str(i),'_cond1) - min(FP2_bloc',num2str(i),'_cond1)) / (max(FP2_bloc',num2str(i),'_cond1)-min(FP2_bloc',num2str(i),'_cond1));'])
+    eval(['FC5_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 4);'])
+    eval(['norm_FC5_bloc',num2str(i),'__cond1 = ((FC5_bloc',num2str(i),'_cond1) - min(FC5_bloc',num2str(i),'_cond1)) / (max(FC5_bloc',num2str(i),'_cond1)-min(FC5_bloc',num2str(i),'_cond1));'])
+    eval(['FC6_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 5);'])
+    eval(['norm_FC6_bloc',num2str(i),'__cond1 = ((FC6_bloc',num2str(i),'_cond1) - min(FC6_bloc',num2str(i),'_cond1)) / (max(FC6_bloc',num2str(i),'_cond1)-min(FC6_bloc',num2str(i),'_cond1));'])
+    eval(['FZ_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 6);'])
+    eval(['norm_FZ_bloc',num2str(i),'__cond1 = ((FZ_bloc',num2str(i),'_cond1) - min(FZ_bloc',num2str(i),'_cond1)) / (max(FZ_bloc',num2str(i),'_cond1)-min(FZ_bloc',num2str(i),'_cond1));'])
+    eval(['T7_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 7);'])
+    eval(['norm_T7_bloc',num2str(i),'__cond1 = ((T7_bloc',num2str(i),'_cond1) - min(T7_bloc',num2str(i),'_cond1)) / (max(T7_bloc',num2str(i),'_cond1)-min(T7_bloc',num2str(i),'_cond1));'])
+    eval(['T8_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 9);'])
+    eval(['norm_T8_bloc',num2str(i),'__cond1 = ((T8_bloc',num2str(i),'_cond1) - min(T8_bloc',num2str(i),'_cond1)) / (max(T8_bloc',num2str(i),'_cond1)-min(T8_bloc',num2str(i),'_cond1));'])
+    eval(['P7_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 10);'])
+    eval(['norm_P7_bloc',num2str(i),'__cond1 = ((P7_bloc',num2str(i),'_cond1) - min(P7_bloc',num2str(i),'_cond1)) / (max(P7_bloc',num2str(i),'_cond1)-min(P7_bloc',num2str(i),'_cond1));'])
+    eval(['P3_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 11);'])
+    eval(['norm_P3_bloc',num2str(i),'__cond1 = ((P3_bloc',num2str(i),'_cond1) - min(P3_bloc',num2str(i),'_cond1)) / (max(P3_bloc',num2str(i),'_cond1)-min(P3_bloc',num2str(i),'_cond1));'])
+    eval(['PZ_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 12);'])
+    eval(['norm_PZ_bloc',num2str(i),'__cond1 = ((PZ_bloc',num2str(i),'_cond1) - min(PZ_bloc',num2str(i),'_cond1)) / (max(PZ_bloc',num2str(i),'_cond1)-min(PZ_bloc',num2str(i),'_cond1));'])
+    eval(['P4_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 13);'])
+    eval(['norm_P4_bloc',num2str(i),'__cond1 = ((P4_bloc',num2str(i),'_cond1) - min(P4_bloc',num2str(i),'_cond1)) / (max(P4_bloc',num2str(i),'_cond1)-min(P4_bloc',num2str(i),'_cond1));'])
+    eval(['P8_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 14);'])
+    eval(['norm_P8_bloc',num2str(i),'__cond1 = ((P8_bloc',num2str(i),'_cond1) - min(P8_bloc',num2str(i),'_cond1)) / (max(P8_bloc',num2str(i),'_cond1)-min(P8_bloc',num2str(i),'_cond1));'])
     eval(['O1_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 15);'])
     eval(['norm_O1_bloc',num2str(i),'__cond1 = ((O1_bloc',num2str(i),'_cond1) - min(O1_bloc',num2str(i),'_cond1)) / (max(O1_bloc',num2str(i),'_cond1)-min(O1_bloc',num2str(i),'_cond1));'])
     eval(['Oz_bloc',num2str(i),'_cond1 = SIGNAL(bloc',num2str(i),'_cond1(1):bloc',num2str(i),'_cond1(2), 16);'])
@@ -180,27 +189,68 @@ for i=1:5
     eval(['norm_O2_bloc',num2str(i),'__cond1 = ((O2_bloc',num2str(i),'_cond1) - min(O2_bloc',num2str(i),'_cond1)) / (max(O2_bloc',num2str(i),'_cond1)-min(O2_bloc',num2str(i),'_cond1));'])
     
     %calcul des TF
+    eval(['fourier_FP1_bloc',num2str(i),'_cond1 = abs(fft(norm_FP1_bloc',num2str(i),'__cond1));'])
+    eval(['fourier_FP2_bloc',num2str(i),'_cond1 = abs(fft(norm_FP2_bloc',num2str(i),'__cond1));'])
+    eval(['fourier_FC5_bloc',num2str(i),'_cond1 = abs(fft(norm_FC5_bloc',num2str(i),'__cond1));'])
+    eval(['fourier_FC6_bloc',num2str(i),'_cond1 = abs(fft(norm_FC6_bloc',num2str(i),'__cond1));'])
+    eval(['fourier_FZ_bloc',num2str(i),'_cond1 = abs(fft(norm_FZ_bloc',num2str(i),'__cond1));'])
+    eval(['fourier_T7_bloc',num2str(i),'_cond1 = abs(fft(norm_T7_bloc',num2str(i),'__cond1));'])
+    eval(['fourier_T8_bloc',num2str(i),'_cond1 = abs(fft(norm_T8_bloc',num2str(i),'__cond1));'])
+    eval(['fourier_P7_bloc',num2str(i),'_cond1 = abs(fft(norm_P7_bloc',num2str(i),'__cond1));'])
+    eval(['fourier_P3_bloc',num2str(i),'_cond1 = abs(fft(norm_P3_bloc',num2str(i),'__cond1));'])
+    eval(['fourier_PZ_bloc',num2str(i),'_cond1 = abs(fft(norm_PZ_bloc',num2str(i),'__cond1));'])
+    eval(['fourier_P4_bloc',num2str(i),'_cond1 = abs(fft(norm_P4_bloc',num2str(i),'__cond1));'])
+    eval(['fourier_P8_bloc',num2str(i),'_cond1 = abs(fft(norm_P8_bloc',num2str(i),'__cond1));'])
     eval(['fourier_O1_bloc',num2str(i),'_cond1 = abs(fft(norm_O1_bloc',num2str(i),'__cond1));'])
     eval(['fourier_Oz_bloc',num2str(i),'_cond1 = abs(fft(norm_Oz_bloc',num2str(i),'__cond1));'])
     eval(['fourier_O2_bloc',num2str(i),'_cond1 = abs(fft(norm_O2_bloc',num2str(i),'__cond1));'])
-
+    
+    % on prend entre 80 et 120 Hz
+    eval(['fourier_FP1_bloc',num2str(i),'_cond1 = fourier_FP1_bloc',num2str(i),'_cond1(80:120);'])
+    eval(['fourier_FP2_bloc',num2str(i),'_cond1 = fourier_FP2_bloc',num2str(i),'_cond1(80:120);'])
+    eval(['fourier_FC5_bloc',num2str(i),'_cond1 = fourier_FC5_bloc',num2str(i),'_cond1(80:120);'])
+    eval(['fourier_FC6_bloc',num2str(i),'_cond1 = fourier_FC6_bloc',num2str(i),'_cond1(80:120);'])
+    eval(['fourier_FZ_bloc',num2str(i),'_cond1 = fourier_FZ_bloc',num2str(i),'_cond1(80:120);'])
+    eval(['fourier_T7_bloc',num2str(i),'_cond1 = fourier_T7_bloc',num2str(i),'_cond1(80:120);'])
+    eval(['fourier_T8_bloc',num2str(i),'_cond1 = fourier_T8_bloc',num2str(i),'_cond1(80:120);'])
+    eval(['fourier_P7_bloc',num2str(i),'_cond1 = fourier_P7_bloc',num2str(i),'_cond1(80:120);'])
+    eval(['fourier_P3_bloc',num2str(i),'_cond1 = fourier_P3_bloc',num2str(i),'_cond1(80:120);'])
+    eval(['fourier_PZ_bloc',num2str(i),'_cond1 = fourier_PZ_bloc',num2str(i),'_cond1(80:120);'])
+    eval(['fourier_P4_bloc',num2str(i),'_cond1 = fourier_P4_bloc',num2str(i),'_cond1(80:120);'])
+    eval(['fourier_P8_bloc',num2str(i),'_cond1 = fourier_P8_bloc',num2str(i),'_cond1(80:120);'])
     eval(['fourier_O1_bloc',num2str(i),'_cond1 = fourier_O1_bloc',num2str(i),'_cond1(80:120);'])
     eval(['fourier_Oz_bloc',num2str(i),'_cond1 = fourier_Oz_bloc',num2str(i),'_cond1(80:120);'])
     eval(['fourier_O2_bloc',num2str(i),'_cond1 = fourier_O2_bloc',num2str(i),'_cond1(80:120);'])
     
     %somme pour chaque bloc
+    eval(['somme_FP1_cond1(',num2str(i),') = sum(fourier_FP1_bloc',num2str(i),'_cond1);'])
+    eval(['somme_FP2_cond1(',num2str(i),') = sum(fourier_FP2_bloc',num2str(i),'_cond1);'])
+    eval(['somme_FC5_cond1(',num2str(i),') = sum(fourier_FC5_bloc',num2str(i),'_cond1);'])
+    eval(['somme_FC6_cond1(',num2str(i),') = sum(fourier_FC6_bloc',num2str(i),'_cond1);'])
+    eval(['somme_FZ_cond1(',num2str(i),') = sum(fourier_FZ_bloc',num2str(i),'_cond1);'])
+    eval(['somme_T7_cond1(',num2str(i),') = sum(fourier_T7_bloc',num2str(i),'_cond1);'])
+    eval(['somme_T8_cond1(',num2str(i),') = sum(fourier_T8_bloc',num2str(i),'_cond1);'])
+    eval(['somme_P7_cond1(',num2str(i),') = sum(fourier_P7_bloc',num2str(i),'_cond1);'])
+    eval(['somme_P3_cond1(',num2str(i),') = sum(fourier_P3_bloc',num2str(i),'_cond1);'])
+    eval(['somme_PZ_cond1(',num2str(i),') = sum(fourier_PZ_bloc',num2str(i),'_cond1);'])
+    eval(['somme_P4_cond1(',num2str(i),') = sum(fourier_P4_bloc',num2str(i),'_cond1);'])
+    eval(['somme_P8_cond1(',num2str(i),') = sum(fourier_P8_bloc',num2str(i),'_cond1);'])
     eval(['somme_O1_cond1(',num2str(i),') = sum(fourier_O1_bloc',num2str(i),'_cond1);'])
     eval(['somme_Oz_cond1(',num2str(i),') = sum(fourier_Oz_bloc',num2str(i),'_cond1);'])
     eval(['somme_O2_cond1(',num2str(i),') = sum(fourier_O2_bloc',num2str(i),'_cond1);'])
     
     %moyenne pour tous les blocs
-    mean_O1_cond1 = mean(somme_O1_cond1);
-    mean_Oz_cond1 = mean(somme_Oz_cond1);
-    mean_O2_cond1 = mean(somme_O2_cond1);
-    mean_O_cond1 = [mean_O1_cond1 mean_Oz_cond1 mean_O2_cond1];
+    mean_F_cond1 = [mean(somme_FP1_cond1) mean(somme_FP2_cond1) mean(somme_FC5_cond1) mean(somme_FC6_cond1) mean(somme_FZ_cond1)];
+    mean_T_cond1 = [mean(somme_T7_cond1) mean(somme_T8_cond1)];
+    mean_P_cond1 = [mean(somme_P7_cond1) mean(somme_P3_cond1) mean(somme_PZ_cond1)  mean(somme_P4_cond1)  mean(somme_P8_cond1)];
+    mean_O_cond1 = [mean(somme_O1_cond1) mean(somme_Oz_cond1) mean(somme_O2_cond1)];
 end
 
+moyennes_F(k,1) = mean(mean_F_cond1);
+moyennes_T(k,1) = mean(mean_T_cond1);
+moyennes_P(k,1) = mean(mean_P_cond1);
 moyennes_O(k,1) = mean(mean_O_cond1);
+
 
 %condition 2
 
